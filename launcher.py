@@ -17,7 +17,7 @@ class GameLauncher:
         # Конфигурационные параметры
         self.game_executable = "MTA/Multi Theft Auto.exe"       # Путь к клиенту
         self.server_executable = "dev/MTA Server.exe"           # Путь к серверу
-        self.ignore_list = ["logs"]                             # Игнорируемые элементы
+        self.ignore_list = ["logs"]                             # Игнорируемые элементы и папки
         
         self.root.resizable(False, False)
         self.root.geometry("700x500")
@@ -31,7 +31,7 @@ class GameLauncher:
         self.root.geometry(f"{width}x{height}+{x}+{y}")
         
         # Конфигурация сервера
-        self.base_url = "http://185.233.116.131/game/"
+        self.base_url = "http://ip/"                # Сюда указать IP или домен откуда будут браться все файлы.
         self.version_url = urljoin(self.base_url, "version.xml")
         self.local_version_path = "version.xml"
         
